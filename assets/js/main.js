@@ -4,6 +4,21 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* popup JS */
+
+function openPopup(id) {
+	document.getElementById(id).style.display = 'flex';
+}
+function closePopup(id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+function openPopup(id, event) {
+  event.preventDefault(); // stops the link navigation
+  document.getElementById(id).style.display = 'block';
+}
+
+
 (function($) {
 
 	var $window = $(window),
@@ -49,7 +64,6 @@
 						window.location.hash = href;
 
 			});
-
 
 	// Panels.
 
